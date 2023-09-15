@@ -103,11 +103,11 @@ public class Main {
         long lV = 1231231231;
         float fV = 123f;
         double dV = 123;
-        System.out.println("Значение переменной iV с типом int равно " + iV + "");
-        System.out.println("Значение переменной bV с типом byte равно " + bV + "");
-        System.out.println("Значение переменной sV с типом short равно " + sV + "");
-        System.out.println("Значение переменной lV с типом long равно " + lV + "");
-        System.out.println("Значение переменной fV с типом float равно " + fV + "");
-        System.out.println("Значение переменной dV с типом double равно " + dV + "");
+        System.out.println("Значение переменной iV с типом int равно " + iV);
+        System.out.println("Значение переменной bV с типом byte равно " + bV);
+        System.out.println("Значение переменной sV с типом short равно " + sV);
+        System.out.println("Значение переменной lV с типом long равно " + lV);
+        System.out.println("Значение переменной fV с типом float равно " + fV);
+        System.out.println("Значение переменной dV с типом double равно " + dV);
     }
 }
