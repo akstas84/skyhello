@@ -1,20 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        int age = 6;
+        int age = 5;
         int temp = 5;
         int speed = 60;
         int peopleCount = 60;
-        boolean childAccompaniedByAdult = true;
+        boolean childAccompaniedByAdult = false;
         int one = 4;
         int two = 2;
         int three = 3;
-        task01(age);
-        task02(temp);
-        task03(speed);
+//        task01(age);
+//        task02(temp);
+//        task03(speed);
         task04(age);
         task05(age, childAccompaniedByAdult);
-        task06(peopleCount);
-        task07(one, two, three);
+        task06();
+//        task07(one, two, three);
     }
 
     private static void task07(int one, int two, int three) {
@@ -27,32 +27,41 @@ public class Main {
         }
     }
 
-    private static void task06(int peopleCount) {
+    private static void task06() {
         short allPlaces = 102;
         short seatingPlaces = 60;
-        if (peopleCount <= seatingPlaces) {
-            System.out.println("Есть место в вагоне сидячие");
-        } else if (peopleCount > seatingPlaces && peopleCount <= allPlaces) {
-            System.out.println("Есть место в вагоне стоячие");
-        } else if (peopleCount > allPlaces) {
-            System.out.println("Вагон уже полностью забит");
+        short occupiedSeatsPlaces = 30;
+        short occupiedStandingPlaces = 40;
+        int freeSeats;
+        int freeStandingPlaces;
+        if(occupiedSeatsPlaces > 0) {
+            freeSeats = seatingPlaces - occupiedSeatsPlaces;
+            System.out.println("Сидячих мест в вагоне: " + freeSeats);
+        }
+        if (occupiedStandingPlaces > 0) {
+            freeStandingPlaces = (allPlaces - seatingPlaces) - occupiedStandingPlaces;
+            System.out.println("Стоячих мест в вагоне: " + freeStandingPlaces);
         }
     }
 
     private static void task05(int age, boolean childAccompaniedByAdult) {
         if (age < 5) {
             System.out.println("Если возраст ребенка равен" + age + ", то ему нельзя кататься на аттракционе");
-        } else if (age > 5 && age < 14 && childAccompaniedByAdult) {
-            System.out.println("Если возраст ребенка равен " + age + ", то ему можно кататься на аттракционе в сопровождении взрослого");
+        } else if (age >= 5 && age <= 14) {
+            if (!childAccompaniedByAdult) {
+                System.out.println("Без сопровождения взрослого кататься нельзя");
+            } else{
+                System.out.println("Если возраст ребенка равен " + age + ", то ему можно кататься на аттракционе в сопровождении взрослого");
+            }
         } else if (age > 14) {
             System.out.println("Если возраст ребенка равен " + age + ", то ему без сопровождения взрослого");
         }
     }
 
     private static void task04(int age) {
-        if (age > 2 && age < 6) {
+        if (age >= 2 && age <= 6) {
             System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в детский сад.");
-        } else if (age > 7 && age < 17) {
+        } else if (age >= 7 && age <= 17) {
             System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в школу.");
         } else if (age >= 18 && age <= 24) {
             System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в университет.");
