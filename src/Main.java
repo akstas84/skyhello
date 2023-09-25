@@ -12,7 +12,6 @@ public class Main {
         task05(monthNumber);
     }
 
-    //Зима Весна Лето Осень
     private static void task05(String monthNumber) {
             switch (monthNumber) {
                 case "01": System.out.println("Зима"); break;
