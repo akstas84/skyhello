@@ -5,31 +5,30 @@ public class Main {
         short deliveryDistance = 95;
         short year = 2020;
         String monthNumber = "12";
-        task01(clientOS);
-        task02(clientOS, clientDeviceYear);
-        task03(year);
-        task04(deliveryDistance);
+//        task01(clientOS);
+//        task02(clientOS, clientDeviceYear);
+//        task03(year);
+//        task04(deliveryDistance);
         task05(monthNumber);
     }
 
+    //Зима Весна Лето Осень
     private static void task05(String monthNumber) {
-        short monthsPerYear = 12;
-        if(Integer.parseInt(monthNumber) <= monthsPerYear){
             switch (monthNumber) {
-                case "01": System.out.println("Январь"); break;
-                case "02": System.out.println("Февраль"); break;
-                case "03": System.out.println("Март"); break;
-                case "04": System.out.println("Апрель"); break;
-                case "05": System.out.println("Май"); break;
-                case "06": System.out.println("Июнь"); break;
-                case "07": System.out.println("Июль"); break;
-                case "08": System.out.println("Август"); break;
-                case "09": System.out.println("Сентябрь"); break;
-                case "10": System.out.println("Октябрь"); break;
-                case "11": System.out.println("Ноябрь"); break;
-                case "12": System.out.println("Декабрь"); break;
+                case "01": System.out.println("Зима"); break;
+                case "02": System.out.println("Зима"); break;
+                case "03": System.out.println("Весна"); break;
+                case "04": System.out.println("Весна"); break;
+                case "05": System.out.println("Весна"); break;
+                case "06": System.out.println("Лето"); break;
+                case "07": System.out.println("Лето"); break;
+                case "08": System.out.println("Лето"); break;
+                case "09": System.out.println("Осень"); break;
+                case "10": System.out.println("Осень"); break;
+                case "11": System.out.println("Осень"); break;
+                case "12": System.out.println("Зима"); break;
+                default: break;
             }
-        }
     }
 
     private static void task04(short deliveryDistance) {
