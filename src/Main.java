@@ -7,7 +7,7 @@ public class Main {
 
     private static void task04(int[] intArr) {
         for (int i =0; i < intArr.length; i++) {
-            if (i % 2 == 0) {
+            if (intArr[i] % 2 != 0) {
                 intArr[i] = intArr[i] + 1;
             }
         }
